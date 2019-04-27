@@ -123,7 +123,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 let animalNames = [];
-zooAnimals.forEach(function(ani){
+zooAnimals.forEach (ani => {
   animalNames.push("Name: "+ ani.animal_name+", "+"Scientific: "+ani.scientific_name)
 });
 console.log(animalNames);
@@ -153,9 +153,8 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 let populationTotal = 0;
-populationTotal = zooAnimals.reduce(function(accumulator, value){
-  return accumulator + value.population;
-}, 0);
+populationTotal = zooAnimals.reduce((accumulator, value) =>
+  accumulator + value.population, 0);
 console.log(populationTotal);
 /* 
 
